@@ -1,3 +1,3 @@
 # JavaProjectP7
 
-# Vending Machine App
+Vending Machine App
