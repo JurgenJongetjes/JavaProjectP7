@@ -1,7 +1,7 @@
 package vendingMachine;
 
 import java.util.ArrayList;
-
+//testing lol
 public class VendingMachine {
 
 	String Voorraad = "";
