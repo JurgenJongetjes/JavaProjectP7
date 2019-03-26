@@ -10,7 +10,7 @@ public class Product {
 	protected int voorraad;
 	
 	public Product(String naam, double prijs, int voorraad) {
-		System.out.println("Maak een product aan");
+		System.out.println("Maak product aan");
 		this.setNaam(naam);
 		this.setPrijs(prijs);
 		this.setVoorraad(voorraad);

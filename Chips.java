@@ -6,7 +6,7 @@ public class Chips extends Product {
 
 	public Chips(String naam, double prijs, int voorraad) {
 		super(naam, prijs, voorraad);
-		System.out.println("Maak Chippies aan");
+		System.out.println("Chippies");
 	}
 	
 	//Override zodat Chips ook gewicht meeneemt
