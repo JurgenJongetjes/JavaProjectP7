@@ -17,6 +17,7 @@ public class VendingMachine {
 		//Set eigenschappen Snicker
 		Snicker snicker = new Snicker("", 0, 0);
 		list.add(snicker);
+		snicker.bijvullen(2);
 		
 		//Set eigenschappen Chips
 		Chips chips = new Chips("", 0, 0);

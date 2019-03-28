@@ -2,7 +2,7 @@ package vendingMachine;
 
 public class WaterSmall extends Water {
 	
-	String inhoud = "";
+	protected String inhoud = "";
 
 	public WaterSmall(String naam, double prijs, int voorraad) {
 		super(naam, prijs, voorraad);

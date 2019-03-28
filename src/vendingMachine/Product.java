@@ -15,6 +15,14 @@ public class Product {
 		this.setPrijs(prijs);
 		this.setVoorraad(voorraad);
 	}
+	
+	//bijvullen functie
+	public void bijvullen(int aantal) {
+		voorraad = voorraad + aantal;
+		System.out.println("Het product: "+ naam + " is bijgevuld met " + aantal + " producten (totaal: " + voorraad + ")" );
+	}
+	
+	//uithalen functie
 
 	/**
 	 * @return the naam
