@@ -3,6 +3,14 @@ package vendingMachine;
 public class Chips extends Product {
 	
 	protected String gewicht = "200gram";
+	
+	public void SetGewicht(String gewicht) {
+		this.gewicht = gewicht;
+	}
+	
+	public String GetGewicht() {
+		return gewicht;
+	}
 
 	public Chips(String naam, double prijs, int voorraad) {
 		super(naam, prijs, voorraad);
