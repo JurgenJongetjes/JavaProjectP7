@@ -41,6 +41,12 @@ public class VendingMachine {
 		//Set eigenschappen BroodjeGezond
 		BroodjeGezond broodjegezond = new BroodjeGezond("", 0, 0);
 		list.add(broodjegezond);
+
+		WaterSmall waterSmall = new WaterSmall("", 0, 0);
+		list.add(waterSmall);
+		
+		WaterLarge waterLarge = new WaterLarge("", 0, 0);
+		list.add(waterLarge);
 		
 		printVoorraad();
 		
