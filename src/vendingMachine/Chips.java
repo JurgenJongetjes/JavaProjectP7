@@ -2,19 +2,15 @@ package vendingMachine;
 
 public class Chips extends Product {
 	
-	protected String gewicht = "200gram";
-	
-	public void SetGewicht(String gewicht) {
-		this.gewicht = gewicht;
-	}
-	
-	public String GetGewicht() {
-		return gewicht;
-	}
+	protected String gewicht = "";
 
 	public Chips(String naam, double prijs, int voorraad) {
 		super(naam, prijs, voorraad);
-		System.out.println("Chippies");
+		this.naam = "Chips Zakje";
+		this.prijs = 1.75;
+		this.voorraad = 12;
+		this.gewicht = "200gram";
+		System.out.println("Stopt Chimpies in de automaat");
 	}
 	
 	//Override zodat Chips ook gewicht meeneemt

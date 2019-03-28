@@ -6,7 +6,7 @@ public class Main {
 		
 		System.out.println("Run VendingMachine");
 		
-		VendingMachine vendingmachine = new VendingMachine();
+//		VendingMachine vendingmachine = new VendingMachine();
 
 	}
 

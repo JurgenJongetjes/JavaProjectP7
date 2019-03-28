@@ -7,10 +7,12 @@ public class Snicker extends Product {
 
 	public Snicker(String naam, double prijs, int voorraad) {
 		super(naam, prijs, voorraad);
-		System.out.println("Snicker");
-		
-//		Snicker snicker = new Snicker("Snicker", 1.25, 14);
-//		list.add(snicker);
+		this.naam = "Snicker";
+		this.prijs = 1.25;
+		this.voorraad = 10;
+		System.out.println("Stopt Snickertje in de automaat");
+//		Snicker snicker = new Snicker("dab", 1.25, 14);
+//		System.out.println();
 	}
 	
-} 
+}

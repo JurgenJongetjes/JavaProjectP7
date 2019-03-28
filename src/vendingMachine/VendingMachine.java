@@ -15,10 +15,10 @@ public class VendingMachine {
 		list = new ArrayList<Product>();
 		
 		//Set eigenschappen Snicker
-		Snicker snicker = new Snicker("Snicker", 1.25, 14);
+		Snicker snicker = new Snicker("", 0, 0);
 		list.add(snicker);
 		
-		Chips chips = new Chips("Chips", 2.05, 10);
+		Chips chips = new Chips("", 0, 0);
 		list.add(chips);
 		
 		printVoorraad();
