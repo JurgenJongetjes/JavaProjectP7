@@ -8,6 +8,7 @@ public class WaterSmall extends Water {
 		super(naam, prijs, voorraad);
 		this.inhoud = "33 Cl";
 		this.voorraad = 8;
+		System.out.println("Stopt kleine watertjes in de automaat");
 	}
 	
 	//Override zodat Chips ook gewicht meeneemt
