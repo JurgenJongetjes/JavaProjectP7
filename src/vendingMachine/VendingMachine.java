@@ -25,6 +25,11 @@ public class VendingMachine {
 		
 	}
 	
+	// Returm ArrayList zodat opnieuw kan gebruiken
+	public ArrayList<Product> getList() {
+	       return list;
+	}
+	
 	public void printVoorraad() {
 		for (Product product : list) {
 			System.out.println(product.toString());

@@ -15,4 +15,12 @@ public class Chips extends Product {
 		return "Product: " + naam + ", prijs: " + prijs + ", gewicht: " + gewicht + ", voorraad: " + voorraad + ".";
 	}
 
+	public String getGewicht() {
+		return gewicht;
+	}
+
+	public void setGewicht(String gewicht) {
+		this.gewicht = gewicht;
+	}
+
 }
