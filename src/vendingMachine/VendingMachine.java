@@ -21,6 +21,14 @@ public class VendingMachine {
 		Chips chips = new Chips("", 0, 0);
 		list.add(chips);
 		
+		WaterSmall waterSmall = new WaterSmall("", 0, 0);
+		list.add(waterSmall);
+		
+		WaterLarge waterLarge = new WaterLarge("", 0, 0);
+		list.add(waterLarge);
+		
+		
+		
 		printVoorraad();
 		
 	}
