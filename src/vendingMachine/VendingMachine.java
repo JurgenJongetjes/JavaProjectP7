@@ -18,8 +18,29 @@ public class VendingMachine {
 		Snicker snicker = new Snicker("", 0, 0);
 		list.add(snicker);
 		
+		//Set eigenschappen Chips
 		Chips chips = new Chips("", 0, 0);
 		list.add(chips);
+		
+		//Set eigenschappen Koek
+		Koek koekje = new Koek("", 0, 0);
+		list.add(koekje);
+		
+		//Set eigenschappen Meuslireep
+		Mueslireep mueslireep = new Mueslireep("", 0, 0);
+		list.add(mueslireep);
+		
+		//Set eigenschappen Nootjes
+		Nootjes nootjes = new Nootjes("", 0, 0);
+		list.add(nootjes);
+		
+		//Set eigenschappen Appel
+		Appel appel = new Appel("", 0, 0);
+		list.add(appel);
+		
+		//Set eigenschappen BroodjeGezond
+		BroodjeGezond broodjegezond = new BroodjeGezond("", 0, 0);
+		list.add(broodjegezond);
 		
 		printVoorraad();
 		
