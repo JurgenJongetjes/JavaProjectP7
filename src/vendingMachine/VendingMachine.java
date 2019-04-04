@@ -14,41 +14,39 @@ public class VendingMachine {
 		
 		list = new ArrayList<Product>();
 		
-		//Set eigenschappen Snicker
+		//Set eigenschappen Snicker 0
 		Snicker snicker = new Snicker("", 0, 0);
 		list.add(snicker);
-		//een snicker er uit halen
-		snicker.uithalen();
-		//2 snickers bijvullen
-		snicker.bijvullen(2);
 		
-		//Set eigenschappen Chips
+		//Set eigenschappen Chips 1
 		Chips chips = new Chips("", 0, 0);
 		list.add(chips);
 		
-		//Set eigenschappen Koek
+		//Set eigenschappen Koek 2
 		Koek koekje = new Koek("", 0, 0);
 		list.add(koekje);
 		
-		//Set eigenschappen Meuslireep
+		//Set eigenschappen Meuslireep 3
 		Mueslireep mueslireep = new Mueslireep("", 0, 0);
 		list.add(mueslireep);
 		
-		//Set eigenschappen Nootjes
+		//Set eigenschappen Nootjes 4
 		Nootjes nootjes = new Nootjes("", 0, 0);
 		list.add(nootjes);
 		
-		//Set eigenschappen Appel
+		//Set eigenschappen Appel 5
 		Appel appel = new Appel("", 0, 0);
 		list.add(appel);
 		
-		//Set eigenschappen BroodjeGezond
+		//Set eigenschappen BroodjeGezond 6
 		BroodjeGezond broodjegezond = new BroodjeGezond("", 0, 0);
 		list.add(broodjegezond);
 
+		//set eingenschappen waterSmall 7
 		WaterSmall waterSmall = new WaterSmall("", 0, 0);
 		list.add(waterSmall);
 		
+		//set eigenschappen waterLarge 8
 		WaterLarge waterLarge = new WaterLarge("", 0, 0);
 		list.add(waterLarge);
 		
@@ -66,6 +64,8 @@ public class VendingMachine {
 			System.out.println(product.toString());
 		}
 	}
+	
+	
 	
 //	public String printVoorraad() {
 //		ArrayList<String> productList = new ArrayList<String>();

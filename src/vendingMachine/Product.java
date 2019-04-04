@@ -24,8 +24,12 @@ public class Product {
 	
 	//uithalen functie
 	public void uithalen() {
+		if(voorraad > 0) {
 		voorraad = voorraad - 1;
 		System.out.println("één "+ naam + " is er uit gehaaldt producten (totaal: " + voorraad + ")");
+		}else {
+			System.out.println("error: de voorraad kan niet onder 0");
+		}
 	}
 
 	/**
