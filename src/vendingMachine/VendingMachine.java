@@ -17,6 +17,9 @@ public class VendingMachine {
 		//Set eigenschappen Snicker
 		Snicker snicker = new Snicker("", 0, 0);
 		list.add(snicker);
+		//een snicker er uit halen
+		snicker.uithalen();
+		//2 snickers bijvullen
 		snicker.bijvullen(2);
 		
 		//Set eigenschappen Chips
@@ -53,7 +56,7 @@ public class VendingMachine {
 		
 	}
 	
-	// Returm ArrayList zodat opnieuw kan gebruiken
+	// Return ArrayList zodat opnieuw kan gebruiken
 	public ArrayList<Product> getList() {
 	       return list;
 	}

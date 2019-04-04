@@ -23,6 +23,10 @@ public class Product {
 	}
 	
 	//uithalen functie
+	public void uithalen() {
+		voorraad = voorraad - 1;
+		System.out.println("één "+ naam + " is er uit gehaaldt producten (totaal: " + voorraad + ")");
+	}
 
 	/**
 	 * @return the naam
