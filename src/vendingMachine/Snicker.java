@@ -11,8 +11,6 @@ public class Snicker extends Product {
 		this.prijs = 1.25;
 		this.voorraad = 10;
 		System.out.println("Stopt Snickertje in de automaat");
-//		Snicker snicker = new Snicker("dab", 1.25, 14);
-//		System.out.println();
 	}
 	
 }

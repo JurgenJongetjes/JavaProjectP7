@@ -2,7 +2,7 @@ package vendingMachine;
 
 public class Chips extends Product {
 	
-	protected String gewicht = "";
+	protected String gewicht;
 
 	public Chips(String naam, double prijs, int voorraad) {
 		super(naam, prijs, voorraad);
