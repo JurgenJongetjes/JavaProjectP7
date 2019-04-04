@@ -12,6 +12,7 @@ public class VendingMachinePanel extends JPanel {
 		
 		//Maak styling aan voor JPanel
 		System.out.println("Maak VendingMachinePanel aan");
+		System.out.println("DABS");
 		this.setBackground(Color.LIGHT_GRAY);
 		
 		//VendingMachine object maken
