@@ -19,8 +19,6 @@ public class VendingMachinePanel extends JPanel {
 		// VendingMachine object maken
 		VendingMachine vendingmachine = new VendingMachine();
 
-		/* Product snicker = new Snicker("", 0, 0); */
-
 		// Label maken
 		JLabel snickersinfo = new JLabel("vooraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €"
 				+ vendingmachine.list.get(0).getPrijs());
@@ -41,6 +39,7 @@ public class VendingMachinePanel extends JPanel {
 		JLabel waterLargeinfo = new JLabel("vooraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €"
 				+ vendingmachine.list.get(8).getPrijs());
 		JLabel geld = new JLabel("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+		
 		// Button maken
 		JButton button0 = new JButton("Snicker");
 		JButton button1 = new JButton("Chips");
@@ -51,6 +50,7 @@ public class VendingMachinePanel extends JPanel {
 		JButton button6 = new JButton("BroodjeGezond");
 		JButton button7 = new JButton("waterSmall");
 		JButton button8 = new JButton("waterLarge");
+		JButton geldterug = new JButton("Geld terug");
 
 		// dingen toevoegen aan paneel
 		add(button0);
@@ -72,17 +72,18 @@ public class VendingMachinePanel extends JPanel {
 		add(button8);
 		add(waterLargeinfo);
 		add(geld);
+		add(geldterug);
 
 		button0.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//checken of je genoeg geld hebt.
+				// checken of je genoeg geld hebt.
 				if (vendingmachine.list.get(0).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
-					//product er uit halen
+					// product er uit halen
 					vendingmachine.list.get(0).uithalen();
-					//geld er af halen
+					// geld er af halen
 					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(0).getPrijs());
-					//labels refreshen
+					// labels refreshen
 					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					snickersinfo.setText("vooraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €"
 							+ vendingmachine.list.get(0).getPrijs());
@@ -191,6 +192,16 @@ public class VendingMachinePanel extends JPanel {
 					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(8).getPrijs());
 					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 				}
+			}
+		});
+		
+		geldterug.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String geldstring = String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld());
+				vendingmachine.geldsysteem.setGeld(0.00);
+				System.out.println("Er is " + geldstring + " uit de vending machine gehaald");
+				geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 			}
 		});
 	}
