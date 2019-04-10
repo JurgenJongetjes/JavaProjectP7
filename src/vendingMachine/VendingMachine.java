@@ -70,18 +70,4 @@ public class VendingMachine {
 	public String format(double dubbel) {
 		return String.format("%1$,.2f", dubbel);
 	}
-	
-	
-//	public String printVoorraad() {
-//		ArrayList<String> productList = new ArrayList<String>();
-//		for (Product product : list) {
-//			//Stop uitkomst in een lijst
-//			productList.add(product.toString());
-//			//Zet lijst in een herbruikbare String
-//			Voorraad = productList.toString();
-//		}
-//		//Return Voorraad String
-//		return Voorraad;
-//	}
-
 }

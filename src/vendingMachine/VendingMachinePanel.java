@@ -208,7 +208,7 @@ public class VendingMachinePanel extends JPanel {
 		button7.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (vendingmachine.list.get(6).getVoorraad() == 0) {
+				if (vendingmachine.list.get(7).getVoorraad() == 0) {
 					System.out.println("Dit product is op");
 					button7.setBackground(Color.RED);
 				} else {
@@ -226,7 +226,7 @@ public class VendingMachinePanel extends JPanel {
 		button8.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (vendingmachine.list.get(0).getVoorraad() == 0) {
+				if (vendingmachine.list.get(8).getVoorraad() == 0) {
 					System.out.println("Dit product is op");
 					button8.setBackground(Color.RED);
 				} else {
