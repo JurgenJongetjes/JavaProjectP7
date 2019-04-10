@@ -1,9 +1,12 @@
 package vendingMachine;
 
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,35 +25,122 @@ public class VendingMachinePanel extends JPanel {
 		// Label maken
 		JLabel snickersinfo = new JLabel("voorraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(0).getPrijs()));
+		snickersinfo.setForeground(Color.WHITE);
+        snickersinfo.setPreferredSize(new Dimension(200, 30));
+        snickersinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel chipsinfo = new JLabel("voorraad: " + vendingmachine.list.get(1).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(1).getPrijs()));
+		chipsinfo.setForeground(Color.WHITE);
+        chipsinfo.setPreferredSize(new Dimension(200, 30));
+        chipsinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel koekinfo = new JLabel("voorraad: " + vendingmachine.list.get(2).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(2).getPrijs()));
+		koekinfo.setForeground(Color.WHITE);
+		koekinfo.setPreferredSize(new Dimension(200, 30));
+        koekinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel meuslireepinfo = new JLabel("voorraad: " + vendingmachine.list.get(3).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(3).getPrijs()));
+		meuslireepinfo.setForeground(Color.WHITE);
+        meuslireepinfo.setPreferredSize(new Dimension(200, 30));
+        meuslireepinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel nootjesinfo = new JLabel("voorraad: " + vendingmachine.list.get(4).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(4).getPrijs()));
+		nootjesinfo.setForeground(Color.WHITE);
+        nootjesinfo.setPreferredSize(new Dimension(200, 30));
+        nootjesinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel appelinfo = new JLabel("voorraad: " + vendingmachine.list.get(5).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(5).getPrijs()));
+		appelinfo.setForeground(Color.WHITE);
+        appelinfo.setPreferredSize(new Dimension(200, 30));
+        appelinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel broodjegezondinfo = new JLabel("voorraad: " + vendingmachine.list.get(6).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(6).getPrijs()));
+		broodjegezondinfo.setForeground(Color.WHITE);
+        broodjegezondinfo.setPreferredSize(new Dimension(200, 30));
+        broodjegezondinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel waterSmallinfo = new JLabel("voorraad: " + vendingmachine.list.get(7).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(7).getPrijs()));
+		waterSmallinfo.setForeground(Color.WHITE);
+        waterSmallinfo.setPreferredSize(new Dimension(200, 30));
+        waterSmallinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel waterLargeinfo = new JLabel("voorraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €"
 				+ vendingmachine.format(vendingmachine.list.get(8).getPrijs()));
+		waterLargeinfo.setForeground(Color.WHITE);
+        waterLargeinfo.setPreferredSize(new Dimension(200, 30));
+        waterLargeinfo.setFont(new Font("Arial", Font.BOLD, 13));
+        
 		JLabel geld = new JLabel("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+		geld.setForeground(Color.WHITE);
+        geld.setPreferredSize(new Dimension(200, 30));
+        geld.setFont(new Font("Arial", Font.BOLD, 13));
 
 		// Button maken
 		JButton button0 = new JButton("Snicker");
+		button0.setBackground(Color.GRAY);
+        button0.setForeground(Color.WHITE);
+        button0.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button0.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button1 = new JButton("Chips");
+		button1.setBackground(Color.GRAY);
+        button1.setForeground(Color.WHITE);
+        button1.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button1.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button2 = new JButton("Koek");
+		button2.setBackground(Color.GRAY);
+        button2.setForeground(Color.WHITE);
+        button2.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button2.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button3 = new JButton("Meuslireep");
+		button3.setBackground(Color.GRAY);
+        button3.setForeground(Color.WHITE);
+        button3.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button3.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button4 = new JButton("Nootjes");
+		button4.setBackground(Color.GRAY);
+        button4.setForeground(Color.WHITE);
+        button4.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button4.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button5 = new JButton("Appel");
+		button5.setBackground(Color.GRAY);
+        button5.setForeground(Color.WHITE);
+        button5.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button5.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button6 = new JButton("BroodjeGezond");
+		button6.setBackground(Color.GRAY);
+        button6.setForeground(Color.WHITE);
+        button6.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button6.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button7 = new JButton("waterSmall");
+		button7.setBackground(Color.GRAY);
+        button7.setForeground(Color.WHITE);
+        button7.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button7.setPreferredSize(new Dimension(100, 30));
+        
 		JButton button8 = new JButton("waterLarge");
+		button8.setBackground(Color.GRAY);
+        button8.setForeground(Color.WHITE);
+        button8.setBorder(BorderFactory.createBevelBorder(1, Color.BLACK, Color.BLACK));
+        button8.setPreferredSize(new Dimension(100, 30));
+        
 		JButton geldterug = new JButton("Geld terug");
+		geld.setForeground(Color.WHITE);
+        geld.setPreferredSize(new Dimension(100, 30));
+        geld.setFont(new Font("Arial", Font.BOLD, 13));
 
 		// dingen toevoegen aan paneel
 		add(button0);
