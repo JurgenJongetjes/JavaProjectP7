@@ -39,7 +39,7 @@ public class VendingMachinePanel extends JPanel {
 		JLabel waterLargeinfo = new JLabel("vooraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €"
 				+ vendingmachine.list.get(8).getPrijs());
 		JLabel geld = new JLabel("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
-		
+
 		// Button maken
 		JButton button0 = new JButton("Snicker");
 		JButton button1 = new JButton("Chips");
@@ -194,13 +194,18 @@ public class VendingMachinePanel extends JPanel {
 				}
 			}
 		});
-		
+
+		// geldterug knop
 		geldterug.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				// slaat het geld op in een string
 				String geldstring = String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld());
+				// haal al het geld er uit
 				vendingmachine.geldsysteem.setGeld(0.00);
+				// zeg in de concole hoe veel geld er uit is gehaald
 				System.out.println("Er is " + geldstring + " uit de vending machine gehaald");
+				// geld label refreshed
 				geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 			}
 		});
