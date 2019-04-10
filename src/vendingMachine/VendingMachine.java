@@ -66,6 +66,10 @@ public class VendingMachine {
 		}
 	}
 	
+	//format methode
+	public String format(double dubbel) {
+		return String.format("%1$,.2f", dubbel);
+	}
 	
 	
 //	public String printVoorraad() {
