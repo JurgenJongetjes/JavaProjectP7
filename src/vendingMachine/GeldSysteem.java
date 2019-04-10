@@ -1,7 +1,7 @@
 package vendingMachine;
 
 public class GeldSysteem {
-	private double geld = 5.00;
+	private double geld = 10.00;
 
 	public double getGeld() {
 		return geld;
