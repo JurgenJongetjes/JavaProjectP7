@@ -3,6 +3,7 @@ package vendingMachine;
 import java.util.ArrayList;
 
 public class VendingMachine {
+	GeldSysteem geldsysteem = new GeldSysteem();
 	
 	String Voorraad = "";
 	

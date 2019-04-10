@@ -22,16 +22,25 @@ public class VendingMachinePanel extends JPanel {
 		/* Product snicker = new Snicker("", 0, 0); */
 
 		// Label maken
-		JLabel snickersinfo = new JLabel("vooraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €" + vendingmachine.list.get(0).getPrijs());
-		JLabel chipsinfo = new JLabel("vooraad: " + vendingmachine.list.get(1).getVoorraad() + " prijs: €" + vendingmachine.list.get(1).getPrijs());
-		JLabel koekinfo = new JLabel("vooraad: " + vendingmachine.list.get(2).getVoorraad() + " prijs: €" + vendingmachine.list.get(2).getPrijs());
-		JLabel meuslireepinfo = new JLabel("vooraad: " + vendingmachine.list.get(3).getVoorraad() + " prijs: €" + vendingmachine.list.get(3).getPrijs());
-		JLabel nootjesinfo = new JLabel("vooraad: " + vendingmachine.list.get(4).getVoorraad() + " prijs: €" + vendingmachine.list.get(4).getPrijs());
-		JLabel appelinfo = new JLabel("vooraad: " + vendingmachine.list.get(5).getVoorraad() + " prijs: €" + vendingmachine.list.get(5).getPrijs());
-		JLabel broodjegezondinfo = new JLabel("vooraad: " + vendingmachine.list.get(6).getVoorraad() + " prijs: €" + vendingmachine.list.get(6).getPrijs());
-		JLabel waterSmallinfo = new JLabel("vooraad: " + vendingmachine.list.get(7).getVoorraad() + " prijs: €" + vendingmachine.list.get(7).getPrijs());
-		JLabel waterLargeinfo = new JLabel("vooraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €" + vendingmachine.list.get(8).getPrijs());
-
+		JLabel snickersinfo = new JLabel("vooraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(0).getPrijs());
+		JLabel chipsinfo = new JLabel("vooraad: " + vendingmachine.list.get(1).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(1).getPrijs());
+		JLabel koekinfo = new JLabel("vooraad: " + vendingmachine.list.get(2).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(2).getPrijs());
+		JLabel meuslireepinfo = new JLabel("vooraad: " + vendingmachine.list.get(3).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(3).getPrijs());
+		JLabel nootjesinfo = new JLabel("vooraad: " + vendingmachine.list.get(4).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(4).getPrijs());
+		JLabel appelinfo = new JLabel("vooraad: " + vendingmachine.list.get(5).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(5).getPrijs());
+		JLabel broodjegezondinfo = new JLabel("vooraad: " + vendingmachine.list.get(6).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(6).getPrijs());
+		JLabel waterSmallinfo = new JLabel("vooraad: " + vendingmachine.list.get(7).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(7).getPrijs());
+		JLabel waterLargeinfo = new JLabel("vooraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €"
+				+ vendingmachine.list.get(8).getPrijs());
+		JLabel geld = new JLabel("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 		// Button maken
 		JButton button0 = new JButton("Snicker");
 		JButton button1 = new JButton("Chips");
@@ -42,8 +51,8 @@ public class VendingMachinePanel extends JPanel {
 		JButton button6 = new JButton("BroodjeGezond");
 		JButton button7 = new JButton("waterSmall");
 		JButton button8 = new JButton("waterLarge");
-		
-		//dingen toevoegen aan paneel
+
+		// dingen toevoegen aan paneel
 		add(button0);
 		add(snickersinfo);
 		add(button1);
@@ -62,79 +71,127 @@ public class VendingMachinePanel extends JPanel {
 		add(waterSmallinfo);
 		add(button8);
 		add(waterLargeinfo);
+		add(geld);
 
 		button0.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(0).uithalen();
-				snickersinfo.setText("vooraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €" + vendingmachine.list.get(0).getPrijs());
+				//checken of je genoeg geld hebt.
+				if (vendingmachine.list.get(0).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					//product er uit halen
+					vendingmachine.list.get(0).uithalen();
+					//geld er af halen
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(0).getPrijs());
+					//labels refreshen
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+					snickersinfo.setText("vooraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(0).getPrijs());
+				}
 			}
 		});
 
 		button1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(1).uithalen();
-				chipsinfo.setText("vooraad: " + vendingmachine.list.get(1).getVoorraad() + " prijs: €" + vendingmachine.list.get(1).getPrijs());
+				if (vendingmachine.list.get(1).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(1).uithalen();
+					chipsinfo.setText("vooraad: " + vendingmachine.list.get(1).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(1).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(1).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
 
 		button2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(2).uithalen();
-				koekinfo.setText("vooraad: " + vendingmachine.list.get(2).getVoorraad() + " prijs: €" + vendingmachine.list.get(2).getPrijs());
+				if (vendingmachine.list.get(2).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(2).uithalen();
+					koekinfo.setText("vooraad: " + vendingmachine.list.get(2).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(2).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(2).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
 
 		button3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(3).uithalen();
-				meuslireepinfo.setText("vooraad: " + vendingmachine.list.get(3).getVoorraad() + " prijs: €" + vendingmachine.list.get(3).getPrijs());
+				if (vendingmachine.list.get(3).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(3).uithalen();
+					meuslireepinfo.setText("vooraad: " + vendingmachine.list.get(3).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(3).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(3).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
 
 		button4.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(4).uithalen();
-				nootjesinfo.setText("vooraad: " + vendingmachine.list.get(4).getVoorraad() + " prijs: €" + vendingmachine.list.get(4).getPrijs());
+				if (vendingmachine.list.get(4).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(4).uithalen();
+					nootjesinfo.setText("vooraad: " + vendingmachine.list.get(4).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(4).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(4).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
 
 		button5.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(5).uithalen();
-				appelinfo.setText("vooraad: " + vendingmachine.list.get(5).getVoorraad() + " prijs: €" + vendingmachine.list.get(5).getPrijs());
+				if (vendingmachine.list.get(5).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(5).uithalen();
+					appelinfo.setText("vooraad: " + vendingmachine.list.get(5).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(5).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(5).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
 
 		button6.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(6).uithalen();
-				broodjegezondinfo.setText("vooraad: " + vendingmachine.list.get(6).getVoorraad() + " prijs: €" + vendingmachine.list.get(6).getPrijs());
+				if (vendingmachine.list.get(6).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(6).uithalen();
+					broodjegezondinfo.setText("vooraad: " + vendingmachine.list.get(6).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(6).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(6).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
 
 		button7.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(7).uithalen();
-				waterSmallinfo.setText("vooraad: " + vendingmachine.list.get(7).getVoorraad() + " prijs: €" + vendingmachine.list.get(7).getPrijs());
+				if (vendingmachine.list.get(7).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(7).uithalen();
+					waterSmallinfo.setText("vooraad: " + vendingmachine.list.get(7).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(7).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(7).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
-		
+
 		button8.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				vendingmachine.list.get(8).uithalen();
-				waterLargeinfo.setText("vooraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €" + vendingmachine.list.get(8).getPrijs());
+				if (vendingmachine.list.get(8).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
+					vendingmachine.list.get(8).uithalen();
+					waterLargeinfo.setText("vooraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €"
+							+ vendingmachine.list.get(8).getPrijs());
+					vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(8).getPrijs());
+					geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
+				}
 			}
 		});
-
 	}
-
 }
