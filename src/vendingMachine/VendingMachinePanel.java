@@ -180,8 +180,8 @@ public class VendingMachinePanel extends JPanel {
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(0).getPrijs());
 						// labels refreshen
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
-						snickersinfo.setText("vooraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(0).getPrijs());
+						snickersinfo.setText("voorraad: " + vendingmachine.list.get(0).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(0).getPrijs()));
 					}
 				}
 			}
@@ -196,8 +196,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(1).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(1).uithalen();
-						chipsinfo.setText("vooraad: " + vendingmachine.list.get(1).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(1).getPrijs());
+						chipsinfo.setText("voorraad: " + vendingmachine.list.get(1).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(1).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(1).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}
@@ -214,8 +214,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(2).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(2).uithalen();
-						koekinfo.setText("vooraad: " + vendingmachine.list.get(2).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(2).getPrijs());
+						koekinfo.setText("voorraad: " + vendingmachine.list.get(2).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(2).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(2).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}
@@ -232,8 +232,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(3).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(3).uithalen();
-						meuslireepinfo.setText("vooraad: " + vendingmachine.list.get(3).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(3).getPrijs());
+						meuslireepinfo.setText("voorraad: " + vendingmachine.list.get(3).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(3).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(3).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}
@@ -250,8 +250,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(4).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(4).uithalen();
-						nootjesinfo.setText("vooraad: " + vendingmachine.list.get(4).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(4).getPrijs());
+						nootjesinfo.setText("voorraad: " + vendingmachine.list.get(4).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(4).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(4).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}
@@ -268,8 +268,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(5).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(5).uithalen();
-						appelinfo.setText("vooraad: " + vendingmachine.list.get(5).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(5).getPrijs());
+						appelinfo.setText("voorraad: " + vendingmachine.list.get(5).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(5).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(5).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}
@@ -286,8 +286,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(6).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(6).uithalen();
-						broodjegezondinfo.setText("vooraad: " + vendingmachine.list.get(6).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(6).getPrijs());
+						broodjegezondinfo.setText("voorraad: " + vendingmachine.list.get(6).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(6).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(6).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}
@@ -304,8 +304,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(7).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(7).uithalen();
-						waterSmallinfo.setText("vooraad: " + vendingmachine.list.get(7).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(7).getPrijs());
+						waterSmallinfo.setText("voorraad: " + vendingmachine.list.get(7).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(7).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(7).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}	
@@ -322,8 +322,8 @@ public class VendingMachinePanel extends JPanel {
 				} else {
 					if (vendingmachine.list.get(8).getPrijs() <= vendingmachine.geldsysteem.getGeld()) {
 						vendingmachine.list.get(8).uithalen();
-						waterLargeinfo.setText("vooraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €"
-								+ vendingmachine.list.get(8).getPrijs());
+						waterLargeinfo.setText("voorraad: " + vendingmachine.list.get(8).getVoorraad() + " prijs: €"
+								+ vendingmachine.format(vendingmachine.list.get(8).getPrijs()));
 						vendingmachine.geldsysteem.geldAfHalen(vendingmachine.list.get(8).getPrijs());
 						geld.setText("geld: " + String.format("%1$,.2f", vendingmachine.geldsysteem.getGeld()));
 					}	
