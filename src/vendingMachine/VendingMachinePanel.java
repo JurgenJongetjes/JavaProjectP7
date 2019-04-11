@@ -163,7 +163,8 @@ public class VendingMachinePanel extends JPanel {
 		add(waterLargeinfo);
 		add(geld);
 		add(geldterug);
-
+		
+		//action listeners voor de knoppen.
 		button0.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

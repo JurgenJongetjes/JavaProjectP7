@@ -74,6 +74,7 @@ public class Product {
 		this.voorraad = voorraad;
 	}
 	
+	//toString functie
 	@Override
 	public String toString() {
 		return "Product: " + naam + ", prijs: " + prijs + ", voorraad: " + voorraad + ".";

@@ -60,13 +60,14 @@ public class VendingMachine {
 	       return list;
 	}
 	
+	//print de voorraad van elke product
 	public void printVoorraad() {
 		for (Product product : list) {
 			System.out.println(product.toString());
 		}
 	}
 	
-	//format methode
+	//format methode zodat er een mooie euro getal uitkomt.
 	public String format(double dubbel) {
 		return String.format("%1$,.2f", dubbel);
 	}

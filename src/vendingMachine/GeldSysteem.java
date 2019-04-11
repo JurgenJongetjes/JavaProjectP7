@@ -3,6 +3,7 @@ package vendingMachine;
 public class GeldSysteem {
 	private double geld = 10.00;
 
+	//getters and setters
 	public double getGeld() {
 		return geld;
 	}
